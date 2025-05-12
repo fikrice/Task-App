@@ -43,8 +43,3 @@ Proyek ini dibuat sebagai latihan pribadi dalam belajar frontend web development
 
 ## 📄 Lisensi
 Template Taskia adalah milik pembuat aslinya. Proyek ini hanya digunakan untuk tujuan pembelajaran.
-
----
-
-Selamat belajar dan semoga berhasil membuat task app kamu sendiri! 🚀
-
