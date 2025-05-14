@@ -26,7 +26,7 @@ class Task {
         console.log(taskId);
         const index = this.tasks.findIndex(task => task.id === taskId);
 
-        if(index !== 1) {
+        if(index !== -1) {
             this.tasks[index].isCompleted = true;
             this.updateLocalStorage();
         } 

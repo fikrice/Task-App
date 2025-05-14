@@ -96,14 +96,18 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div class="flex flex-row items-center gap-x-3">
                                 <a href="#"
                                     class="my-auto font-semibold text-taskia-red border border-taskia-red p-[12px_20px] h-12 rounded-full">Delete</a>
-                                <a href="#" id="completedTask-${task.id}"
+                                ${task.isCompleted === false ?
+                                `<a href="#" id="completeTask-${task.id}"
                                     class="flex gap-[10px] justify-center items-center text-white p-[12px_20px] h-12 font-semibold bg-gradient-to-b from-[#977FFF] to-[#6F4FFF] rounded-full w-full border border-taskia-background-grey">Complete</a>
-                            </div>
+                            </div>`
+                            :
+                            `<a href="#" id="completeTask-${task.id}" class="hiddem"></a>`
+                            }
                 
                 `;
                 taskWrapper.appendChild(itemTask);
 
-                itemTask.querySelector(`#completedTask-${task.id}`).addEventListener('click', function(event) {
+                itemTask.querySelector(`#completeTask-${task.id}`).addEventListener('click', function(event) {
                     event.preventDefault();
                     myTasks.completeTask(task.id);
                     const updateTasks = myTasks.getTasks();
